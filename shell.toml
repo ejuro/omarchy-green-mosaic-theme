@@ -1,0 +1,186 @@
+# Omarchy shell surfaces. Colors derive from colors.toml; sizes and the
+# typographic scale come from the keys below. Themes can ship
+# themes/<name>/shell.toml to replace this generated file.
+
+[bar]
+background = "#F5F0E5"
+background-alpha = 0.0
+text = "#293C30"
+active = "#293C30"
+scale-with-font = true
+size-horizontal = 26
+size-vertical = 28
+[hyprland]
+# Shared Hyprland-derived border tokens. Surface sections reference these so
+# lock, notifications, popups, and menu-style cards stay aligned with the
+# current Hyprland active-border gradient.
+active-border            = "#365B43"
+active-border-foreground = "#365B43"
+
+[controls]
+normal-color = "#293C30"
+normal-fill-alpha = 0.04
+normal-border = "#293C30"
+normal-border-width = 1
+normal-border-alpha = 0.4
+hover-cursor-color = "#365B43"
+hover-cursor-fill-alpha = 0.08
+hover-cursor-border = "#365B43"
+hover-cursor-border-width = 1
+hover-cursor-border-alpha = 0.25
+focus-color = "#365B43"
+focus-fill-alpha = 0.08
+focus-border = "#365B43"
+focus-border-width = 1
+focus-border-alpha = 0.65
+selected-color = "#365B43"
+selected-fill-alpha = 0.18
+selected-border = "#365B43"
+selected-border-width = 0
+selected-border-alpha = 1.0
+pressed-fill-alpha = 0.22
+selection-fill-alpha = 0.35
+[spacing]
+# `scale` multiplies shared margins, gaps, padding, controls, and panel
+# dimensions; components keep their proportions. With scale-with-font
+# enabled, those dimensions grow/shrink with [font] base-size too. Per-token
+# overrides (in px) below pin individual values without affecting the rest
+# of the scale. Uncomment any to tune a specific surface.
+scale = 1.0
+scale-with-font = true
+# xxs                       = 2
+# xs                        = 3
+# sm                        = 4
+# md                        = 6
+# lg                        = 8
+# xl                        = 10
+# xxl                       = 12
+# xxxl                      = 14
+# huge                      = 18
+# control-gap               = 8
+# control-padding-x         = 10
+# control-padding-y         = 6
+# input-padding-y           = 7
+# control-height            = 28
+# popup-row-height          = 28
+# row-gap                   = 8
+# row-padding-x             = 12
+# label-gap                 = 4
+# panel-gap                 = 14
+# panel-padding             = 18
+# popup-padding             = 14
+# dropdown-width            = 240
+# searchable-dropdown-width = 260
+# number-field-width        = 120
+# searchable-popup-min-height = 220
+
+[font]
+# base-size is the rem root for the type scale. Every Style.font.<token>
+# derives from it (e.g. body = base, subtitle ≈ base * 1.083,
+# heading ≈ base * 1.333). The shell only floors this at 1px; increase it
+# as much as you want.
+base-size = 12
+# Per-token overrides, in px. Uncomment any to pin a specific size without
+# affecting the rest of the scale. Useful for stylistic emphasis (a
+# minimalist theme that wants a bigger heading without scaling everything).
+# caption       = 10
+# body-small    = 11
+# body          = 12
+# subtitle      = 13
+# title         = 14
+# heading       = 16
+# display       = 24
+# display-large = 28
+# icon-small    = 11
+# icon          = 14
+# icon-large    = 18
+
+[popups]
+background = "#F8F4EB"
+background-alpha = 1.0
+text = "#293C30"
+border = "#ACB79C"
+border-alpha = 1.0
+border-width = 1
+[tooltip]
+background = "#F8F4EB"
+background-alpha = 1.0
+text = "#293C30"
+border = "#ACB79C"
+border-alpha = 1.0
+[notifications]
+background = "#F8F4EB"
+background-alpha = 1.0
+text = "#293C30"
+border = "#ACB79C"
+border-alpha = 1.0
+border-width = 1
+countdown = "#365B43"
+[launcher]
+background = "#F8F4EB"
+background-alpha = 1.0
+text = "#293C30"
+border = "#ACB79C"
+border-alpha = 1.0
+scrim = "#293C30"
+scrim-alpha = 0.10
+selected-background = "#ACB79C"
+selected-background-alpha = 1.0
+selected-text = "#293C30"
+selected-border = "#365B43"
+selected-border-alpha = 0.35
+[menu]
+background = "#F8F4EB"
+background-alpha = 1.0
+text = "#293C30"
+border = "#ACB79C"
+border-alpha = 1.0
+scrim = "#293C30"
+scrim-alpha = 0.10
+selected-background = "#ACB79C"
+selected-background-alpha = 1.0
+selected-text = "#293C30"
+selected-border = "#365B43"
+selected-border-alpha = 0.35
+[polkit]
+# Polkit authentication prompt (sudo/password dialogs). scrim is the
+# darkening layer behind the card; background is the card itself.
+# text-error tints the lock icon, password text, and placeholder when
+# authentication fails. border-alpha applies to both border and
+# border-error (the two states are mutually exclusive in time).
+background       = "#F8F4EB"
+background-alpha = 1.0
+text             = "#293C30"
+text-error       = "#293C30"
+border           = "hyprland.active-border"
+border-error     = "#293C30"
+border-alpha     = 1.0
+scrim            = "#F8F4EB"
+scrim-alpha      = 0.5
+# accent is the lock-icon glyph color + text-selection tint.
+accent           = "#365B43"
+
+[lock]
+background = "#F8F4EB"
+background-alpha = 1.0
+text = "#293C30"
+placeholder = "#62755E"
+text-error = "#293C30"
+border = "#ACB79C"
+border-active = "#365B43"
+border-error = "#293C30"
+border-alpha = 1.0
+selection = "#365B43"
+selection-alpha = 0.15
+[image-picker]
+# Carousel-style picker. The picker has no card surface, so `scrim` is
+# the full-screen wash. Per-slice dim overlays and text outlines on top
+# of the scrim track the foundational background color directly.
+# unselected-border-alpha softens carousel slices that aren't selected.
+scrim                   = "#F8F4EB"
+scrim-alpha             = 0.5
+text                    = "#293C30"
+selected-border         = "#365B43"
+selected-border-alpha   = 1.0
+unselected-border       = "#293C30"
+unselected-border-alpha = 0.28

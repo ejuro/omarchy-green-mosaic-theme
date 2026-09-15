@@ -1,0 +1,38 @@
+mode = "light"
+
+accent = "#365B43"
+selection = "#ACB79C"
+selection_foreground = "#293C30"
+selection_background = "#ACB79C"
+muted = "#62755E"
+
+background = "#F8F4EB"
+dark_background = "#F1EADB"
+darker_background = "#DFD6C5"
+lighter_background = "#ACB79C"
+
+foreground = "#293C30"
+dark_foreground = "#62755E"
+light_foreground = "#365B43"
+bright_foreground = "#293C30"
+
+hyprland_active_border = "#365B43"
+hyprland_inactive_border = "#ACB79C"
+
+# Mosaic forest-green terminal and syntax palette.
+# Exact motif colors; pale sage is used for borders and selection backgrounds.
+red = "#293C30"
+green = "#365B43"
+yellow = "#62755E"
+orange = "#62755E"
+blue = "#365B43"
+magenta = "#293C30"
+cyan = "#62755E"
+brown = "#62755E"
+
+bright_red = "#365B43"
+bright_green = "#62755E"
+bright_yellow = "#62755E"
+bright_blue = "#62755E"
+bright_magenta = "#365B43"
+bright_cyan = "#62755E"
